@@ -9,13 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ConverterApp
-    
 {
     public partial class frm_Main : Form
     {
+        string[] readings = new string [5];
+        
         public frm_Main()
         {
             InitializeComponent();
+
         }
 
         // Global Variables and Constants
@@ -50,12 +52,25 @@ namespace ConverterApp
                 txt_Convert.Text = dbl_Convert.ToString();
                 lbl_Display.Text = txt_UnitOfMeasure.Text + " centimetres is converted to ";
                 lbl_Convert.Text = " inches.";
+
+                // While I is less than the length of the array the for loop is carried out, so it is carried out 5 times
+
+                for (int i = 0; i<readings.Length; i++)
+                {
+                    readings[i] = txt_Convert.Text;
+                }
+
+                //The 5 readings are then outputed in to a text box
+                readingstxt.Text = "Reading 1 = " + readings[0] + "Inches " + "\n" +
+                    "Reading 2 = " + readings[1] + "Inches " + "\n" +
+                    "Reading 3 = " + readings[2] + "Inches " + "\n" +
+                    "Reading 4 = " + readings[3] + "Inches " + "\n" +
+                    "Reading 5 = " + readings[4] + "Inches " + "\n";                   
             }
         }
 
         private void frm_Main_Load(object sender, EventArgs e)
         {
-
         }
 
         private void btn_CM_to_Feet_Click(object sender, EventArgs e)
@@ -79,6 +94,22 @@ namespace ConverterApp
                 txt_Convert.Text = dbl_Convert.ToString();
                 lbl_Display.Text = txt_UnitOfMeasure.Text + " centimetres is converted to ";
                 lbl_Convert.Text = " Feet.";
+
+                // While I is less than the length of the array the for loop is carried out, so it is carried out 5 times
+
+                for (int i = 0; i < readings.Length; i++)
+                {
+                    readings[i] = txt_Convert.Text;
+
+                }
+
+                //The 5 readings are then outputed in to a text box
+
+                readingstxt.Text = "Reading 1 = " + readings[0] + "Inches " + "\n" +
+                    "Reading 2 = " + readings[1] + "Feet " + "\n" +
+                    "Reading 3 = " + readings[2] + "Feet " + "\n" +
+                    "Reading 4 = " + readings[3] + "Feet " + "\n" +
+                    "Reading 5 = " + readings[4] + "Feet " + "\n";
             }
         }
 
@@ -103,6 +134,21 @@ namespace ConverterApp
                 txt_Convert.Text = dbl_Convert.ToString();
                 lbl_Display.Text = txt_UnitOfMeasure.Text + " Kilometre is converted to ";
                 lbl_Convert.Text = " Miles.";
+
+                // While I is less than the length of the array the for loop is carried out, so it is carried out 5 times
+
+                for (int i = 0; i < readings.Length; i++)
+                {
+                    readings[i] = txt_Convert.Text;
+
+                }
+                //The 5 readings are then outputed in to a text box
+                readingstxt.Text = "Reading 1 = " + readings[0] + "Miles " + "\n" +
+                    "Reading 2 = " + readings[1] + "Miles " + "\n" +
+                    "Reading 3 = " + readings[2] + "Miles " + "\n" +
+                    "Reading 4 = " + readings[3] + "Miles " + "\n" +
+                    "Reading 5 = " + readings[4] + "Miles " + "\n";
+
             }
 
         }
@@ -130,6 +176,26 @@ namespace ConverterApp
                 lbl_Convert.Text = " Feet.";
             }
 
+            // While I is less than the length of the array the for loop is carried out, so it is carried out 5 times
+
+            for (int i = 0; i < readings.Length; i++)
+                {
+                readings[i] = txt_Convert.Text;
+
+            }
+
+            //The 5 readings are then outputed in to a text box
+            readingstxt.Text = "Reading 1 = " + readings[0] + "Feet " + "\n" +
+                "Reading 2 = " + readings[1] + "Feet " + "\n" +
+                "Reading 3 = " + readings[2] + "Feet " + "\n" +
+                "Reading 4 = " + readings[3] + "Feet " + "\n" +
+                "Reading 5 = " + readings[4] + "Feet " + "\n";
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void btn_Celcius_to_Fahrenheit_Click(object sender, EventArgs e)
@@ -152,9 +218,24 @@ namespace ConverterApp
                 lbl_Display.Text = txt_UnitOfMeasure.Text + " Degrees C is converted to ";
                 lbl_Convert.Text = " Degrees F.";
             }
+
+            // While I is less than the length of the array the for loop is carried out, so it is carried out 5 times
+
+            for (int i = 0; i < readings.Length; i++)
+                {
+                readings[i] = txt_Convert.Text;
+
+            }
+
+            readingstxt.Text = "Reading 1 = " + readings[0] + "Degrees F " + "\n" +
+                "Reading 2 = " + readings[1] + "Degrees F " + "\n" +
+                "Reading 3 = " + readings[2] + "Degrees F " + "\n" +
+                "Reading 4 = " + readings[3] + "Degrees F " + "\n" +
+                "Reading 5 = " + readings[4] + "Degrees F " + "\n";
+
         }
 
-      }
+    }
 
 
 

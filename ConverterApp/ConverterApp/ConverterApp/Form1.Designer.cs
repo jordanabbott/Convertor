@@ -39,6 +39,7 @@
             this.btn_CM_to_Feet = new System.Windows.Forms.Button();
             this.btn_KM_to_Miles = new System.Windows.Forms.Button();
             this.btn_Celcius_to_Fahrenheit = new System.Windows.Forms.Button();
+            this.readingstxt = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_UofM
@@ -151,11 +152,20 @@
             this.btn_Celcius_to_Fahrenheit.UseVisualStyleBackColor = true;
             this.btn_Celcius_to_Fahrenheit.Click += new System.EventHandler(this.btn_Celcius_to_Fahrenheit_Click);
             // 
+            // readingstxt
+            // 
+            this.readingstxt.AutoSize = true;
+            this.readingstxt.Location = new System.Drawing.Point(26, 284);
+            this.readingstxt.Name = "readingstxt";
+            this.readingstxt.Size = new System.Drawing.Size(0, 13);
+            this.readingstxt.TabIndex = 13;
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 362);
+            this.Controls.Add(this.readingstxt);
             this.Controls.Add(this.btn_Celcius_to_Fahrenheit);
             this.Controls.Add(this.btn_KM_to_Miles);
             this.Controls.Add(this.btn_CM_to_Feet);
@@ -189,6 +199,7 @@
         private System.Windows.Forms.Button btn_CM_to_Feet;
         private System.Windows.Forms.Button btn_KM_to_Miles;
         private System.Windows.Forms.Button btn_Celcius_to_Fahrenheit;
+        private System.Windows.Forms.Label readingstxt;
     }
 }
 
